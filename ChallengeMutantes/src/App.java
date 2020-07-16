@@ -9,26 +9,26 @@ public class App {
 
         int contadorHorizontal = checkMat(getMatrix(dna));
         contadorFinal = contadorFinal + contadorHorizontal;
-        if (contadorFinal > 3) {
+        if (contadorFinal >1) {
             return true;
         }
 
         int contadorVertical = checkMat(getMatrixTransposed(getMatrix(dna)));
         contadorFinal = contadorFinal + contadorVertical;
-        if (contadorFinal > 3) {
+        if (contadorFinal >1) {
             return true;
         }
 
         // Check for diagonal matches
         int contadorDiag = diagonals(getMatrix(dna));
         contadorFinal = contadorFinal + contadorDiag;
-        if (contadorFinal > 3) {
+        if (contadorFinal >1) {
             return true;
         }
 
         int contadorDiag2 = diagonals2(getMatrix(dna));
         contadorFinal = contadorFinal + contadorDiag2;
-        if (contadorFinal > 3) {
+        if (contadorFinal >1) {
             return true;
         }
 
